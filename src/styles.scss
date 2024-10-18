@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.container {
+  border: 1px solid #b5c1b2;
+  border-radius: 10px;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  background-color: #e3e7a0;
+}

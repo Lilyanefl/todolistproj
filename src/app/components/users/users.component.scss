@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+ul {
+  max-height: 200px;
+}
+span .me-2 {
+  flex-shrink: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #d7e8ba;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.card {
+  background-color: #e8f0c0;
+}

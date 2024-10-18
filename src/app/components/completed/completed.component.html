@@ -1,0 +1,28 @@
+<body>
+  <div class="container">
+    <h1 class="text-center mb-4">Completed task list</h1>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">To-do ID</th>
+          <th scope="col">To-do</th>
+          <th scope="col">First name</th>
+          <th scope="col">Last name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let todoUtente of todosUtenti">
+          <td>{{ todoUtente.todo.id }}</td>
+          <td>{{ todoUtente.todo.todo }}</td>
+          <td>{{ todoUtente.user.firstName }}</td>
+          <td>{{ todoUtente.user.lastName }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="todosUtenti.length === 0" class="alert alert-info text-center">
+      There are no completed tasks.
+    </div>
+  </div>
+</body>

@@ -1,0 +1,32 @@
+<body>
+  <div class="container">
+    <div *ngFor="let item of todosUtenti" class="mt-3 mx-5 d-flex flex-column">
+      <div class="d-flex align-items-center">
+        <input
+          type="checkbox"
+          [(ngModel)]="item.todo.completed"
+          class="form-check-input me-2"
+        />
+        <h5
+          [ngClass]="item.todo.completed ? 'text-success' : 'text-danger'"
+          class="mb-1"
+        >
+          {{ item.todo.todo }}
+        </h5>
+      </div>
+      <div class="ms-4">
+        <p *ngIf="item.user" class="mb-0">
+          <strong>User:</strong> {{ item.user.firstName }}
+          {{ item.user.lastName }}
+        </p>
+        <p *ngIf="!item.user" class="mb-0"><strong>User:</strong> Unknown</p>
+
+        <p class="mb-1">
+          <strong>Status:</strong>
+          {{ item.todo.completed ? "Completed" : "To do" }}
+        </p>
+      </div>
+      <hr class="mt-3" />
+    </div>
+  </div>
+</body>
